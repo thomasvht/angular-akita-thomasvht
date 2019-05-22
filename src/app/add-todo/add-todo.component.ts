@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {TodoService} from "../services/todo.service";
+import {TodosService} from "../statemanagement/todos.service";
 
 @Component({
   selector: 'app-add-todo',
@@ -8,14 +8,14 @@ import {TodoService} from "../services/todo.service";
 })
 export class AddTodoComponent implements OnInit {
 
-  constructor(private todosService: TodoService) { }
+  constructor(private todosService: TodosService) { }
 
   ngOnInit() {
+
   }
 
-  add(input: any) {
-    this.todosService.add(input.target.value);
-    input.target.value = '';
+  add(input: HTMLInputElement) {
+    this.todosService.add(input.value);
+    input.value = '';
   }
-
 }
