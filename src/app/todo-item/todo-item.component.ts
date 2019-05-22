@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Todo} from "../statemanagement/todo.model";
 import {ID} from "@datorama/akita";
 import {FormControl} from "@angular/forms";
@@ -8,7 +8,8 @@ import {takeUntil} from "rxjs/operators";
 @Component({
   selector: 'app-todo-item',
   templateUrl: './todo-item.component.html',
-  styleUrls: ['./todo-item.component.scss']
+  styleUrls: ['./todo-item.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TodoItemComponent implements OnInit {
   @Input() todo: Todo;

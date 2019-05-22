@@ -26,4 +26,8 @@ export class TodoListComponent implements OnInit {
   delete(id: ID) {
     this.todosService.delete(id);
   }
+
+  trackByFn(index, todo) {
+    return todo.id;
+  }
 }
