@@ -1,0 +1,12 @@
+<div class="flex">
+  <div class="ox-form__checkbox">
+    <input type="checkbox" id="checkbox-levis" class="ox-form__checkbox__input" value="Levis"
+           aria-describedby="brandpicker" />
+    <label for="checkbox-levis" class="ox-form__checkbox__label">{{todo}}</label>
+  </div>
+  <div class="ox-button-group">
+    <button type="button" class="ox-button ox-button--primary" (click)="removeTodo(todo)"><span
+            class="ox-button__icon ox-button__icon--left ox-icon ox-icon--trash" aria-hidden="true"></span>
+      Remove</button>
+  </div>
+</div>
