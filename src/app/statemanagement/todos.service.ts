@@ -14,10 +14,6 @@ export class TodosService {
     this.todosStore.add(todo);
   }
 
-  update(id, todo: Partial<Todo>) {
-    this.todosStore.update(id, todo);
-  }
-
   complete({ id, completed }: Todo) {
     this.todosStore.update(id, {
       completed
