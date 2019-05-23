@@ -17,6 +17,7 @@ export class TodoListComponent implements OnInit {
 
   ngOnInit() {
     this.todos$ = this.todosQuery.selectVisibleTodos$;
+    this.todos$.subscribe(state => console.log('state', state));
   }
 
   complete(todo: Todo) {
